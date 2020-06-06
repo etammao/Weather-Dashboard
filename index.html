@@ -23,7 +23,12 @@
         <input id="searchInput" type="text" class="form-control" placeholder="City Name" aria-label="Recipient's username" aria-describedby="button-addon2">
         <div class="input-group-append">
           <button class="btn btn-primary" type="button" id="button-addon2" onclick="fetchWeather(getCityName())">Search</button>
+          <button class="btn btn-primary" type="button" id="button-addon2" onclick="clearHistory()">Clear History</button>
         </div>
+        <br/>
+        <ul id="history" class="list-group">
+
+        </ul>
       </div>
 
       <p id="timeshown"></p>
@@ -49,41 +54,13 @@
     </h1>
     <div class="row">
         
-            <div class="col-lg-3 card text-white bg-primary mb-3" style="max-width: 18rem;">
-                <div class="card-header">Date:</div>
+            <div id="forecast" class="col-lg-3 card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div id="forecastDate" class="card-header">Date:</div>
                 <div class="card-body">
-                <h5 class="card-title">temperature:</h5>
-                <p class="card-text">humidity:</p>
-                </div>
+                <h5 id="forecastTemp" class="card-title">temperature:</h5>
+                <p id="forecastHum" class="card-text">humidity:</p>
             </div>
-            <div class="col-lg-2 card text-white bg-secondary mb-3" style="max-width: 18rem;">
-                <div class="card-header">Date:</div>
-                <div class="card-body">
-                <h5 class="card-title">temperature:</h5>
-                <p class="card-text">humidity:</p>
-                </div>
-            </div>
-            <div class="col-lg-2 card text-white bg-success mb-3" style="max-width: 18rem;">
-                <div class="card-header">Date:</div>
-                <div class="card-body">
-                <h5 class="card-title">temperature:</h5>
-                <p class="card-text">humidity:</p>
-                </div>
-            </div>
-            <div class="col-lg-2 card text-white bg-danger mb-3" style="max-width: 18rem;">
-                <div class="card-header">Date:</div>
-                <div class="card-body">
-                <h5 class="card-title">temperature:</h5>
-                <p class="card-text">humidity:</p>
-                </div>
-            </div>
-            <div class="col-lg-3 card text-white bg-warning mb-3" style="max-width: 18rem;">
-                <div class="card-header">Date:</div>
-                <div class="card-body">
-                <h5 class="card-title">temperature:</h5>
-                <p class="card-text">humidity:</p>
-                </div>
-            </div>
+            
     </div>
 </div>
 
