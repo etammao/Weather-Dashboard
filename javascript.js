@@ -43,8 +43,10 @@ async function fetchWeather(cityName){
 }
 
 function displayWeather(currentData, oneCallData){
-    locationEl.textContent=`City: ${currentData.name}`
-    temperatureEl.textContent=`Temperature: ${currentData.main.temp}`;
+    var tempNum= currentData.main.temp - 273.15;
+    var tempNumber=Number(tempNum).toFixed(1);
+    locationEl.textContent=`City: ${currentData.name}`;
+    temperatureEl.textContent=`Temperature: ${tempNumber}`;
     windSpeedEl.textContent=`wind speed: ${currentData.wind.speed}`;
     humidityEl.textContent=`Humidity: ${currentData.main.humidity}`;
     UVEl.textContent=`UV index: ${oneCallData.current.uvi}`;
